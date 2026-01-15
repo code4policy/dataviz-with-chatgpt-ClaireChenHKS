@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston 311 Calls - Top 10 Reasons</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chart.css">
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Boston 311: Top 10 Call Reasons</h1>
+        <p class="subtitle">Based on 2025 city service request data</p>
+        <div class="button-container">
+            <button id="toggleBtn" class="toggle-btn">Show All Reasons</button>
+        </div>
+        <div id="chart"></div>
+        <footer class="chart-footer">
+            <p class="data-source">Data Source: <a href="https://data.boston.gov/dataset/311-service-requests" target="_blank">City of Boston Open Data - 311 Service Requests</a></p>
+            <p class="chart-credit">Chart by Liyang Chen | Created with D3.js</p>
+        </footer>
+    </div>
+    
+    <!-- Include our JS file -->
+    <script src="chart.js"></script>
+</body>
+</html>

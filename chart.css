@@ -1,0 +1,189 @@
+/* Base styles reset and font settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Container styles */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Title styles */
+h1 {
+    text-align: center;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 35px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Chart container */
+#chart {
+    width: 100%;
+}
+
+/* Bar styles */
+.bar {
+    fill: #4a90d9;
+    transition: fill 0.3s ease;
+}
+
+.bar:hover {
+    fill: #2c5aa0;
+}
+
+/* Axis styles */
+.axis path,
+.axis line {
+    stroke: #dee2e6;
+}
+
+.axis text {
+    font-size: 13px;
+    fill: #495057;
+    font-weight: 500;
+}
+
+/* Y-axis label (reason names) styles */
+.y-axis text {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Hide Y-axis domain line */
+.y-axis .domain {
+    stroke: none;
+}
+
+/* X-axis label styles */
+.x-axis text {
+    font-size: 12px;
+    fill: #6c757d;
+}
+
+/* Value label styles */
+.bar-label {
+    font-size: 12px;
+    fill: #212529;
+    font-weight: 600;
+}
+
+/* Axis title */
+.axis-title {
+    font-size: 14px;
+    font-weight: 600;
+    fill: #495057;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: absolute;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    pointer-events: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip strong {
+    color: #ffc107;
+}
+
+/* Grid line styles */
+.grid line {
+    stroke: #e0e0e0;
+    stroke-dasharray: 3, 3;
+}
+
+.grid .domain {
+    stroke: none;
+}
+
+/* Footer styles */
+.chart-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.data-source {
+    font-size: 12px;
+    color: #6c757d;
+    margin-bottom: 6px;
+}
+
+.data-source a {
+    color: #6c5ce7;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.data-source a:hover {
+    color: #a29bfe;
+    text-decoration: underline;
+}
+
+.chart-credit {
+    font-size: 11px;
+    color: #adb5bd;
+    font-style: italic;
+}
+
+/* Button container */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+    font-family: 'Inter', sans-serif;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+
+.toggle-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.3);
+}
