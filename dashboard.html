@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston 311 Calls - Monthly Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Boston 311 Complaints by Month</h1>
+        <p class="subtitle">Monthly distribution of 311 service requests in 2025</p>
+        
+        <!-- Statistics Cards -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value" id="totalComplaints">0</div>
+                <div class="stat-label">Total Complaints</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgComplaints">0</div>
+                <div class="stat-label">Monthly Average</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="peakMonth">-</div>
+                <div class="stat-label">Peak Month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="lowMonth">-</div>
+                <div class="stat-label">Lowest Month</div>
+            </div>
+        </div>
+        
+        <!-- Filters -->
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="reasonFilter">Complaint Type:</label>
+                <select id="reasonFilter">
+                    <option value="all">All Types</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="neighborhoodFilter">Neighborhood:</label>
+                <select id="neighborhoodFilter">
+                    <option value="all">All Neighborhoods</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Sort By:</label>
+                <div class="toggle-buttons">
+                    <button id="sortMonth" class="sort-btn active">Month Order</button>
+                    <button id="sortCount" class="sort-btn">By Count</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="chart"></div>
+        <footer class="chart-footer">
+            <p class="data-source">Data Source: <a href="https://data.boston.gov/dataset/311-service-requests" target="_blank">City of Boston Open Data - 311 Service Requests</a></p>
+            <p class="chart-credit">Chart by Liyang Chen | Created with D3.js</p>
+        </footer>
+    </div>
+    
+    <!-- Include our JS file -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
